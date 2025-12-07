@@ -1,10 +1,12 @@
 import java.util.Scanner;
 public class NokiaMenuInterface{
 public static void main(String [] args){
-Scanner input = new Scanner(System.in);
 
-     
-    
+    menu();
+}
+
+public static void menu(){
+Scanner input = new Scanner(System.in);
 
     String appMenu = """
 
@@ -72,8 +74,13 @@ Scanner input = new Scanner(System.in);
                                         case 2 ->System.out.println("ForMemorystatus");
                                     }
                                 }
-                        case 9 -> System.out.println("Speed tags");
-                        case 10 -> System.out.println("Voice tags");
+                        case 9 -> {
+                                    System.out.println("Speed tags");
+                                    menu();
+                                }
+                        case 10 -> {System.out.println("Voice tags");
+                                    menu();
+                                    }
                 }
                       
               }
