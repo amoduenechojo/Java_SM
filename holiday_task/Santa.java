@@ -3,38 +3,40 @@ public static void main(String [] args){
     
     for(int day = 1; day <= 12; ++day){
 
-        System.out.println("On the");
+        System.out.print("On the ");
 
         switch(day){
-            case 1-> System.out.println("first"); 
+            case 1-> System.out.print("first"); 
                    
+            case 2 -> System.out.print("second");
             
-            case 2 -> System.out.println("second");
-            
-            case 3 -> System.out.println("third");
+            case 3 -> System.out.print("third");
 
-            case 4 -> System.out.println("fourth");
+            case 4 -> System.out.print("fourth");
 
-            case 5 -> System.out.println("fifth");
+            case 5 -> System.out.print("fifth");
 
-            case 6 -> System.out.println("sixth");
+            case 6 -> System.out.print("sixth");
 
-            case 7 -> System.out.println("seventh");
+            case 7 -> System.out.print("seventh");
 
-            case 8 -> System.out.println("eighth");
+            case 8 -> System.out.print("eighth");
 
-            case 9 -> System.out.println("ninth");
+            case 9 -> System.out.print("ninth");
 
-            case 10 -> System.out.println("tenth");
+            case 10 -> System.out.print("tenth");
 
-            case 11 -> System.out.println("eleventh");
+            case 11 -> System.out.print("eleventh");
 
-            case 12 -> System.out.println("twelfth");
+            case 12 -> System.out.print("twelfth");
             }
         
-        System.out.println("day of christmas, my true love gave to me: ");  
+        System.out.println(" day of christmas, my true love gave to me: ");  
 
-        switch(day) {
+         
+         for(int prize = day; prize >=1; --prize){
+
+        switch(prize) {
             case 12 -> 
                 System.out.println("Twelve drummers drumming,");
            
@@ -71,11 +73,12 @@ public static void main(String [] args){
             case 1 -> 
                System.out.println("A partridge in a pear tree.");
             }
-            System.out.println(); 
+             
         }
+            System.out.println();
      }
    }
- 
+ }
 
 
 
