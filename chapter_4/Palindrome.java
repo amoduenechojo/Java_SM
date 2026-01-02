@@ -5,11 +5,11 @@ public class Palindrome{
 
 
         int result1 = number % 10;
-        int result2 = (number / 10) % 100;
-        int result3 = (number / 100); 
-        int result4 = (number / 1000);
-        int result5 = (number / 10000);
-        int reversed =( result1 * 10000) + (result2 * 1000) + (result3 * 100) +( result4 * 10) + result5;
+        int result2 = (number / 10) % 10;
+        int result3 = (number / 100)% 10; 
+        int result4 = (number / 1000)% 10;
+        int result5 = (number / 10000)% 10;
+        int reversed =(result1 * 10000) + (result2 * 1000) + (result3 * 100) +( result4 * 10) + result5;
 
         
         System.out.println("Original: " + number);

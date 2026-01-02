@@ -311,7 +311,7 @@ Scanner input = new Scanner(System.in);
                                     Press 1 -> Call settings 
                                     Press 2 -> Phone settings   
                                     Press 3 -> Security settings
-                                    Press 3 -> Restore factory settings
+                                    Press 4-> Restore factory settings
                                     
                                    """;
                                  System.out.print(settings);

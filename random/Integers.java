@@ -34,13 +34,12 @@ public class Integers{
              System.out.println("The smallest number is:" + smallestNumber);
 
 
-         int largestNumber = secondNumber;
+         largestNumber = secondNumber;
 
 
-       if (firstNumber > largestNumber) {
-       largestNumber = firstNumber;
-}
-       else if (thirdNumber > largestNumber){
+       if (firstNumber > largestNumber); {
+ }       largestNumber = firstNumber;
+         else if (thirdNumber > largestNumber){
         largestNumber = thirdNumber;
 }
         System.out.print("The largest number is:" + largestNumber);

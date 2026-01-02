@@ -5,26 +5,6 @@ public static void main(String [] args){
     menu();
 }
 
-public static void menu(){
-Scanner input = new Scanner(System.in);
-
-    String appMenu = """
-
-        NOKIA,MAKING LIFE EASIER - EAT NG
-        Press 1:For Phonebook 
-        Press 2:For Messages
-        Press 3:For Chat
-        Press 4:For Call registers
-        Press 5:For Tones
-        Press 6:For Settings
-        Press 7:For Call divert
-        Press 8:For Games
-        Press 9:For Calculator
-        Press 10:For Reminders
-        Press 11:For Clock
-        Press 12:For Profiles
-        Press 13:For Sim services
-        """;
 
     System.out.println(appMenu);
     System.out.println("Enter your choice: ");
