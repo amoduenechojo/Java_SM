@@ -1,125 +1,117 @@
 import java.util.Scanner;
-import java.util.Array;
-   
-    public class StudentsGrade{
-    public static void main(String [] args){
-        Scanner input = new Scanner(System.in);
 
-        int [] scores = new int[100];
-        
-        for (int numbers = 0; numbers < scores.length; numbers++){
-            scores[numbers] = input.nextInt();
-            }             
-
-
-            System.out.print("Enter the number of students you teach: ");
-            int numberOfStudents = input.nextInt();
-
-            System.out.print("Enter the number of subjects you teach: ");
-            int numberOfSubjects = input.nextInt();
-
-            System.out.println("Saving >>>>>>>>>>>>>>>>");
-            System.out.println("Saved successfully");
-
-//             public void 
-
-            System.out.print("Enter the first students score: ");
-            int Student 1 = input.nextInt();
-
-            System.out.print("Enter the score for first subject: ");
-            int firstStudentSubject1 = input.nextInt();
-            
-            System.out.print("Enter the score for first subject: ");
-            int Student 2 = input.nextInt();
+public class StudentsGrade {
     
-            System.out.print("Enter the score for first subject: ");
-            int firstStudentSubject3 = input.nextInt();
+    static Scanner input = new Scanner(System.in);
 
-            System.out.println("Saving >>>>>>>>>>>>>>>>");
-            System.out.println("Saved successfully");
+    public static void main(String[] args) {
+        System.out.print("How many students do you have? ");
+        int numberOfStudents = input.nextInt();
 
-            System.out.print("Enter the second students score: ");
-            int secondStudentScore = input.nextInt();
-            
-            System.out.print("Enter the score for first subject: ");
-            int secondStudentSubject1 = input.nextInt();
+        System.out.print("How many subjects do they offer? ");
+        int numberOfSubjects = input.nextInt();
 
-            System.out.print("Enter the score for first subject: ");
-            int secondStudentSubject2 = input.nextInt();
+        int[][] studentsGrade = new int[numberOfStudents][numberOfSubjects];
 
-            System.out.print("Enter the score for first subject: ");
-            int secondStudentSubject3 = input.nextInt();
+        collectScores(studentsGrade, numberOfStudents, numberOfSubjects);
+        findHardestSubject(studentsGrade, numberOfStudents, numberOfSubjects);
+        findEasiestSubject(studentsGrade, numberOfStudents, numberOfSubjects);
+    }
 
-            System.out.println("Saving >>>>>>>>>>>>>>>>");
-            System.out.println("Saved successfully");
-            
-            for (int numbers = 0; numbers < scores.length; numbers++){
-            scores[numbers] = input.nextInt();
-            }             
+    public static void collectScores(int[][] studentsGrade, int numOfRows, int numOfColumn) {
+        for (int row = 0; row < numOfRows; row++) {
+            System.out.print("Entering score for student" + (row + 1)+ ":");
+             int studentsStudent = input.nextInt();
 
-           
-            int total = firstStudentSubject1 + firstStudentSubject2 + firstStudentSubject3;
-
-            int average = sum / total;
-            System.out.print("Average score: " + average);
-    
-            int total = secondStudentSubject1 + secondStudentSubject2 + secondStudentSubject3;
-
-
-
-
-
-
-
-
-
-
-
-           
-         
-//
-//            if (score >= 90)
-//                System.out.println("Student " + (numbers + 1) + ": A");
-//            else if (score >= 70)
-//                System.out.println("Student " + (numbers  + 1) + ": B");
-//            else if (score >= 60)
-//                System.out.println("Student " + (numbers + 1) + ": C");
-//            else
-//                System.out.println("Student " + (numbers  + 1) + ": F");
+ 
+            for (int column = 0; column < numOfColumn; column++) {
+                System.out.print("Enter score for subject " + (column + 1)+ ":");
+                int studentsScore = input.nextInt();
+                
+                if (studentsScore >= 0 & studentsScore <= 100) {
+                    studentsGrade[row][column] = studentsScore;  
+                    System.out.println("Saved successfully");
+                } else {
+                    System.out.println("Invalid! Enter 0-100.");
+                    column--; 
+                }
+            }
         }
     }
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public static void findHardestSubject(int[][] studentsGrade, int numOfRows, int numOfColumn) {
+        int hardestSubjectIndex = 0;
+        int maximumFailuresFound = -1;
+
+        for (int column = 0; column < numOfColumn; column++) {
+            int failureCount = 0; 
+            for (int row = 0; row < numOfRows; row++) {
+                if (studentsGrade[row][column] < 40) {
+                    failureCount++;
+                }
+            }
+
+            if (failureCount > maximumFailuresFound) {
+                maximumFailuresFound = failureCount;
+                hardestSubjectIndex = column + 1;
+            }
+        }
+        System.out.println("The hardest subject is Subject " + hardestSubjectIndex + " with " + maximumFailuresFound + " failures");
+    }
+
+    public static void findEasiestSubject(int[][] studentsGrade, int numOfRows, int numOfColumn) {
+        int easiestSubjectIndex = 0;
+        int maximumPassesFound = -1;
+
+        for (int column = 0; column < numOfColumn; column++) {
+            int passCount = 0; 
+            for (int row = 0; row < numOfRows; row++) {
+                if (studentsGrade[row][column] >= 40) {
+                    passCount++;
+                }
+            }
+
+            if (passCount > maximumPassesFound) {
+                maximumPassesFound = passCount;
+                easiestSubjectIndex = column + 1;
+            }
+        }
+        System.out.println("The easiest subject is Subject " + easiestSubjectIndex + " with " + maximumPassesFound + " passes");
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-    }
