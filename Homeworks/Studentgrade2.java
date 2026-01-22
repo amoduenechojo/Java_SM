@@ -18,23 +18,23 @@
 
 
 
-import java.util.Scanner;
-
-public class StudentGrade {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.String);
-
-  
-        System.out.println("How many students do you have?");
-        int numOfStudents = scanner.nextInt();
-        System.out.println("How many subjects do they offer?");
-        int numOfSubjects = scanner.nextInt();
-
-        System.out.println("Saving >>>>>>>>>>>>>>>>>>>>>>>");
-        System.out.println("Saved successfully");
-
-        int[][] grades = new int[numOfStudents][numOfSubjects];
-
+//import java.util.Scanner;
+//
+//public class StudentGrade {
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.String);
+//
+//  
+//        System.out.println("How many students do you have?");
+//        int numOfStudents = scanner.nextInt();
+//        System.out.println("How many subjects do they offer?");
+//        int numOfSubjects = scanner.nextInt();
+//
+//        System.out.println("Saving >>>>>>>>>>>>>>>>>>>>>>>");
+//        System.out.println("Saved successfully");
+//
+//        int[][] grades = new int[numOfStudents][numOfSubjects];
+//
         for (int students = 0; students < numOfStudents; student++) {
             for (int subject = 0; subject < numOfSubjects; subject++) {
                 int score;

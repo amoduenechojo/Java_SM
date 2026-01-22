@@ -21,7 +21,7 @@ public class StudentsGrade {
     public static void collectScores(int[][] studentsGrade, int numOfRows, int numOfColumn) {
         for (int row = 0; row < numOfRows; row++) {
             System.out.print("Entering score for student" + (row + 1)+ ":");
-             int studentsStudent = input.nextInt();
+             int studentsSubject = input.nextInt();
 
  
             for (int column = 0; column < numOfColumn; column++) {
@@ -39,12 +39,16 @@ public class StudentsGrade {
         }
     }
 
-    
-
-    
 
 
-
+    public static void studentTable(int[][] studentsGrade, noOfSubjects, noOfStudents);
+                System.out.println("====================================================================================");
+                System.out.print("STUDENT\t\t");
+                for (int noOfSubects = 1; subejcts <= numOfSubjects; noOfSubjects++){
+                    System.out.print("SUB" + noOfSubjects + "\t");
+                    System.out.println("TOT\tAVE\tPOS");
+                    System.out.println("====================================================================================");
+                    }
 
 
 
