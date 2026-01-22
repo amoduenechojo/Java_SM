@@ -1,28 +1,30 @@
 import java.util.Scanner;
 
-public class TaskFive {
+public class TaskSeven {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         int[] scores = new int[10];
-        System.out.println("Enter 10 scores");
 
         for (int score = 0; score < scores.length; score++) {
             System.out.print("Enter score: ");
             scores[score] = input.nextInt();
         }
 
-        oddIndex(scores); 
+        int min = findingMinimum(scores);
+        System.out.println("Minimum score is: " + min);
     }
 
-    public static void oddIndex(int[] scores) {
-        System.out.println("Scores at odd indices:");
-        for (int score = 0; score < scores.length; score++) {
-            if (score % 2 != 0) {
-                System.out.println(scores[score]);
+    public static int findingMinimum(int[] scores) {
+        int min = scores[0];
+
+        for (int score = 1; score < scores.length; score++) {
+            if (scores[score] < min) {
+                min = scores[score];
             }
         }
+        return min;
     }
 }
 

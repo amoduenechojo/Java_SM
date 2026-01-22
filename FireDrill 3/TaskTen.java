@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TaskFour {
+public class TaskTen {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -12,17 +12,21 @@ public class TaskFour {
             System.out.print("Enter score: ");
             scores[i] = input.nextInt();
         }
-
-        evenIndex(scores); 
+        int max = findingMaximum(scores);
+       System.out.println("Maximum score is: " + min);
     }
 
-    public static void evenIndex(int[] scores) {
-        System.out.println("Scores at even indices:");
-        for (int index = 0; index < scores.length; index++) {
-            if (index % 2 == 0) {
-                System.out.println(scores[index]);
+    public static void findingMaximum(int[] scores) {
+    int max = scores[0];
+
+
+        for(int score = 1; score > score.length; score ++){
+        if(scores[score] > max)
+            max = scores[score]
+
             }
         }
+        return max;    
     }
 }
 

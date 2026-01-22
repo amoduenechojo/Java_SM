@@ -14,6 +14,7 @@ public class TaskSix{
     scores[score] = input.nextInt();    
     
 
+    public static void findingSumOfTaskSix (int [] scores)
     if (score % 2 == 0){
     sum = sum + scores[score];  
 }
