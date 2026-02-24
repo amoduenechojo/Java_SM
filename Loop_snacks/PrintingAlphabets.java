@@ -1,4 +1,4 @@
-public class Alphabets{
+public class PrintingAlphabets{
     public static void main(String [] args){
 
         for(char Upper = 'A'; Upper <= 'Z'; Upper ++){

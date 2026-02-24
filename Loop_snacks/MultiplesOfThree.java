@@ -1,7 +1,7 @@
-public class FirstFifty{
+public class MultiplesOfThree{
     public static void main(String [] args){
     
-        for(int count = 1; count <= ; count ++){
+        for(int count = 1; count <= 50; count ++){
             if(count % 3 == 0){
             System.out.println(count);
             }

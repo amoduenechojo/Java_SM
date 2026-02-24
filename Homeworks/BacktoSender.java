@@ -15,6 +15,8 @@ import java.util.Scanner;
 
         int basePay = 5000;
         int amountParcel = 0;
+
+switch()
       
         if (deliveries < 50){
             amountParcel = 160;

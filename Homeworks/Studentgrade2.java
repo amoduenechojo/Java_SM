@@ -53,7 +53,6 @@
             }
         }
 
-        // 4. Calculations for Table [cite: 59]
         int[] totals = new int[numOfStudents];
         double[] averages = new double[numOfStudents];
         for (int i = 0; i < numOfStudents; i++) {
@@ -65,7 +64,6 @@
             averages[i] = (double) sum / numOfSubjects;
         }
 
-        // 5. Positioning logic using If/Else [cite: 59]
         int[] positions = new int[numOfStudents];
         for (int i = 0; i < numOfStudents; i++) {
             int rank = 1;
@@ -77,7 +75,6 @@
             positions[i] = rank;
         }
 
-        // 6. Display Table Output [cite: 59, 60]
         System.out.println("====================================================================================");
         System.out.print("STUDENT\t\t");
         for (int j = 1; j <= numOfSubjects; j++) System.out.print("SUB" + j + "\t");
@@ -93,7 +90,7 @@
         }
         System.out.println("====================================================================================");
 
-        // 7. Subject Summary Logic [cite: 66, 67, 73, 79]
+       
         System.out.println("\nSUBJECT SUMMARY");
         int overallHighest = -1, highStudent = 0, highSub = 0;
         int overallLowest = 101, lowStudent = 0, lowSub = 0;
@@ -109,14 +106,14 @@
                 int score = grades[i][j];
                 subTotal += score;
 
-                // Pass/Fail (Assume 50 is pass) [cite: 72, 82, 83]
+              
                 if (score >= 50) passes++; else fails++;
 
-                // Local Max/Min [cite: 68, 71]
+                ]
                 if (score > subMax) { subMax = score; subMaxStudent = i + 1; }
                 if (score < subMin) { subMin = score; subMinStudent = i + 1; }
 
-                // Overall Max/Min [cite: 94]
+                
                 if (score > overallHighest) { overallHighest = score; highStudent = i + 1; highSub = j + 1; }
                 if (score < overallLowest) { overallLowest = score; lowStudent = i + 1; lowSub = j + 1; }
             }
@@ -129,12 +126,11 @@
             System.out.println("Number of passes: " + passes);
             System.out.println("Number of Fails: " + fails + "\n");
 
-            // Hardest/Easiest logic [cite: 92, 93]
+          
             if (fails > maxFails) { maxFails = fails; hardestSub = j + 1; }
             if (passes > maxPasses) { maxPasses = passes; easiestSub = j + 1; }
         }
 
-        // 8. Class Summary [cite: 95]
         int bestStudent = 0, worstStudent = 0;
         int maxTotal = -1, minTotal = 10000, classTotal = 0;
 
