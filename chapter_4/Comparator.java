@@ -5,24 +5,20 @@ import java.util.Scanner;
             Scanner input = new Scanner(System.in);
 
             System.out.println("Enter a number: ");
-            int number1 = input.nextInt();
+            int firstNumber = input.nextInt();
 
             System.out.println("Enter a number: ");
-            int number2 = input.nextInt();
+            int secondNumber = input.nextInt();
 
-            if (number1 == number2)
+            if (firstNumber == secondNumber)
             System.out.println("0");
 
-            else if (number1 <= number2)
+            else if (firstNumber <= secondNumber)
             System.out.println("1");
 
-            if (number2 <= number1)
+            if (secondNumber <= firstNumber)
             System.out.println("-1");
 
-            }
+     }
 
-
-
-
-
-    }
+        }

@@ -1,0 +1,2 @@
+ Create a constructor for events, then create a get method. When creating the even have an array list of type event details, put each element inside the array list to 
+

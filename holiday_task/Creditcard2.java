@@ -81,7 +81,7 @@ public class Creditcard2 {
     public static String creditCardValidityStatusTotal(String number) {
 
         int even = creditCardValidityStatus(number);
-        int odd = creditCardValidityStatusOdd(number);
+        int odd = creditCardValidityStatusOdd(number);==
         
         int total = even + odd;
 

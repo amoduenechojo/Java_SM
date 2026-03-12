@@ -1,0 +1,6 @@
+Guess the Number Game
+Simulate a number guessing game using a loop. The “secret” number should be fixed in the code. The user keeps guessing until they get it right. After each guess, the program should tell the user whether the guess is too high or too low.
+
+
+public class  GuessGame
+

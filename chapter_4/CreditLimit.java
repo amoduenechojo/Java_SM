@@ -1,29 +1,32 @@
 import java.util.Scanner;
-    public class CreditLimit{
+public class CreditLimit{
     public static void main(String [] args){
         Scanner input = new Scanner(System.in);
 
         System.out.print("Account number: ");
-        int account = input.nextInt();
+        int accountNumber = input.nextInt();
 
+while( accountNumber != -1){
         System.out.println("Beginning balance: ");
         int balance = input.nextInt();
 
         System.out.println("Charges: ");
-        int charges = input.nextInt();
+        int totalCharges = input.nextInt();
 
         System.out.println("Credits: ");
-        int credits = input.nextInt();        
+        int totalCredits = input.nextInt();        
         
         System.out.println("Credit limit: ");
-        int limit = input.nextInt();
+        int creditLimit = input.nextInt();
 
-        int newBalance = balance + charges - credits;
+        int newBalance = balance + (totalCharges - totalCredits);
         System.out.println("New balance: " + newBalance);
 
-        if (newBalance > limit){
+        if (newBalance > creditLimit){
         System.out.println("Credit limit exceeded");
         }
       }
+   
+}
     }
 
