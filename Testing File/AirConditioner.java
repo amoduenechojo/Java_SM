@@ -30,7 +30,10 @@ public class AirConditioner{
             return temperature;
 
     }
-
+    
+    public static void(){
+        return 0;
+    }
 
     public int fixedIncreaseInTemperature(){
         if (temperature > 30){
@@ -49,6 +52,7 @@ public class AirConditioner{
     
 //    public int getTemperatureValue(){
 //        if()}
+//...
 
 }
 
