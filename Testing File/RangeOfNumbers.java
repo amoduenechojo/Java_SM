@@ -40,7 +40,20 @@ public class RangeOfNumbers{
     }
 
 
-    public static int getSecondLowestNumber(int [] numbers)
+    public static int getSecondLowestNumber(int [] numbers){
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 
 
 
