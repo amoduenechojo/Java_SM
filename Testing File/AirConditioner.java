@@ -12,12 +12,12 @@ public class AirConditioner{
 
     public boolean turnOn(){
         isOn = true; 
+    return true;
     }
 
 
-
     public int increaseInTemperature(){
-        if(isOn == true && temperatue < 30){
+        if(isOn == true && temperature < 30){
             temperature = temperature + 1;
     }
         return temperature;
@@ -33,20 +33,22 @@ public class AirConditioner{
 
 
     public int fixedIncreaseInTemperature(){
-        (if temperature > 30){
-            final temperature == 30;
+        if (temperature > 30){
+            temperature = 30;
         }
-
+        return temperature;
     }
 
     public int fixedDecreaseInTemperature(){
-        (if temperature < 16){
-            final temperature == 16;
+        if (temperature < 16){
+            temperature = 16;
         }
-        
-
+        return temperature;
     }
 
+    
+//    public int getTemperatureValue(){
+//        if()}
 
 }
 

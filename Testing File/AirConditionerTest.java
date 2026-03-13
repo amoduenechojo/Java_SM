@@ -7,12 +7,12 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 public class AirConditionerTest{
    
    @Test
-        public void testThatAirConditionersOff(){
+        public void testThatAirConditionerIsOff(){
 
 
         AirConditioner myAC = new AirConditioner();
 
-        boolean expectedValue = true;
+        boolean expectedValue = false;
         boolean actualValue = myAC.ACStatus;
       
         assertEquals(expectedValue, actualValue);
@@ -58,7 +58,7 @@ public class AirConditionerTest{
 
 
     @Test
-        public void testFixedIncreaseInTemperature(){
+        public void testForFixedIncreaseInTemperature(){
 
         AirConditioner myAC = new AirConditioner();
 
