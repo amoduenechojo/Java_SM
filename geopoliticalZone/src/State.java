@@ -1,0 +1,11 @@
+public enum State {
+
+    NORTHCENTRAL, NORTHEAST, NORTHWEST, SOUTHEAST, SOUTHSOUTH, SOUTHWEST
+
+}
+
+
+
+
+
+
