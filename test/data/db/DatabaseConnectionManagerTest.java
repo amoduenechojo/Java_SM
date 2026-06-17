@@ -14,15 +14,15 @@ public class DatabaseConnectionManagerTest {
     @Test
     public void testCanConnectToMySQLDatabase(){
 
-        try{
         String username = "root";
         String password = "Godsplan.25.";
-        String url = "jdbc:mysql://localhost:3306/safe_haven_db?crreateDatabaseIfNotExist=true";
+        String url = "jdbc:mysql://localhost:3306/safe_haven_db?createDatabaseIfNotExist=true";
 
-        Connection connection = DatabaseConnectionManager.connectToDatabase(username, password, url);
 
-        assertNotNull(connection);
-        assertTrue(connection.isValid(5));
+        try(Connection connection = DatabaseConnectionManager.connectToDatabase(username, password, url);){
+
+            assertNotNull(connection);
+            assertTrue(connection.isValid(5));
         }
 
         catch(SQLException e){
